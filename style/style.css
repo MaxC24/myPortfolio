@@ -9,6 +9,11 @@ body {
 	font-family: Gotham Rounded;
 }
 
+button {
+	border: none;
+	outline: none;
+}
+
 #top {
 	color: #888;
 	padding-left: 30px;
@@ -23,7 +28,14 @@ body {
 }
 
 
-#main {
+#center {
+}
+
+#buttons {
+	padding: 50px 0px;
+	width: 200px;
+	position: relative;
+	right: 200px;
 }
 
 .btn {
@@ -31,23 +43,24 @@ body {
 	width: 400px;
 	height: 50px;
 	background-color: #EEE;
-	outline: none;
 	font-size: 1em;
 	font-family: Gotham Rounded;
 	margin-bottom: 30px;
 	text-align: right;
 	padding-right: 40px;
+	border-radius: 10px;
+	box-shadow: 1px 1px 4px rgba(0, 0, 0, .2);
 }
 
-#buttons {
-	padding: 50px 0px;
-	width: 200px;
+.btn:active {
+	background-color: #BBB;
 }
+
 
 footer {
 	width: 100%;
 	height:50vw;
-	background: url('../img/footer-background.png') no-repeat;
+	background: url('../img/dreamy_landscape.png') no-repeat;
 	background-size: 100% auto;
 	bottom: 0px;
 }
