@@ -26,6 +26,24 @@ body {
 #main {
 }
 
+.btn {
+	color: #888;
+	width: 400px;
+	height: 50px;
+	background-color: #EEE;
+	outline: none;
+	font-size: 1em;
+	font-family: Gotham Rounded;
+	margin-bottom: 30px;
+	text-align: right;
+	padding-right: 40px;
+}
+
+#buttons {
+	padding: 50px 0px;
+	width: 200px;
+}
+
 footer {
 	width: 100%;
 	height:50vw;
@@ -33,4 +51,3 @@ footer {
 	background-size: 100% auto;
 	bottom: 0px;
 }
-
