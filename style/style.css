@@ -1,0 +1,36 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0px;
+	height: 100%;
+	font-size: 1em;
+	font-family: Gotham Rounded;
+}
+
+#top {
+	color: #888;
+	padding-left: 30px;
+	padding-top: 45px;
+	height: 200px;
+	background: url('../img/ovals.svg') no-repeat;
+	background-size: auto 100%;
+}
+
+#name {
+	font-size: 2em;
+}
+
+
+#main {
+}
+
+footer {
+	width: 100%;
+	height:50vw;
+	background: url('../img/footer-background.png') no-repeat;
+	background-size: 100% auto;
+	bottom: 0px;
+}
+
