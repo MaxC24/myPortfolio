@@ -14,6 +14,14 @@ button {
 	outline: none;
 }
 
+footer {
+	width: 100%;
+	height:50vw;
+	background: url('../img/dreamy_landscape.png') no-repeat;
+	background-size: 100% auto;
+	bottom: 0px;
+}
+
 #top {
 	color: #888;
 	padding-left: 30px;
@@ -48,7 +56,7 @@ button {
 	margin-bottom: 30px;
 	text-align: right;
 	padding-right: 40px;
-	border-radius: 10px;
+	border-radius: 30px;
 	box-shadow: 1px 1px 4px rgba(0, 0, 0, .2);
 }
 
@@ -56,11 +64,15 @@ button {
 	background-color: #BBB;
 }
 
-
-footer {
+.lightbox {
+	opacity: 0;
+	position: fixed;
+	z-index: 999;
 	width: 100%;
-	height:50vw;
-	background: url('../img/dreamy_landscape.png') no-repeat;
-	background-size: 100% auto;
-	bottom: 0px;
+	height: 100%;
+	text-align: center;
+	top: 0;
+	left: 0;
+	background: rgba(0,0,0,0.8);
 }
+
