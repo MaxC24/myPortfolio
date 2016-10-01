@@ -6,8 +6,11 @@ $(document).ready(function(){
 			{ title: 'PROJECTS' },
 			{ title: 'ABOUT'}];
 
-		// var $resume = $("<embed src='./img/resume.pdf'></embed>");
-		var $resume = $('<object data="./img/resume.pdf" type="application/pdf" width="80%" >');
+		// shows the resume in a lightbox
+		var $resume = $('<div class="lightbox"><Object data="./img/resume.pdf" type="application/pdf" width="70%" height="100%""></Object></div>');
+		$resume.on('click', function(){
+			$(this).remove();
+		});
 
 		//create the buttons and append them to the #buttons dom Element
 		var $buttonsArray = buttonsInfo.map(function(obj) {
@@ -28,7 +31,7 @@ $(document).ready(function(){
 		$('.btn').click(function(){
 			switch($(this)[0].innerHTML) {
 				case 'RESUME':
-					 $("#screen").append($resume);
+					$("#screen").append($resume);
 					console.log('resume');
 					break;
 				case 'PROJECTS':

@@ -14,6 +14,14 @@ button {
 	outline: none;
 }
 
+footer {
+	width: 100%;
+	height:50vw;
+	background: url('../img/dreamy_landscape.png') no-repeat;
+	background-size: 100% auto;
+	bottom: 0px;
+}
+
 #top {
 	color: #888;
 	padding-left: 30px;
@@ -56,11 +64,14 @@ button {
 	background-color: #BBB;
 }
 
-
-footer {
+.lightbox {
+	position: fixed;
+	z-index: 999;
 	width: 100%;
-	height:50vw;
-	background: url('../img/dreamy_landscape.png') no-repeat;
-	background-size: 100% auto;
-	bottom: 0px;
+	height: 100%;
+	text-align: center;
+	top: 0;
+	left: 0;
+	background: rgba(0,0,0,0.8);
 }
+
