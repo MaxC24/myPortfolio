@@ -8,8 +8,8 @@ $(document).ready(function(){
 
 		// shows the resume in a lightbox
 		var $resume = $('<div class="lightbox"><Object data="./img/resume.pdf" type="application/pdf" width="70%" height="100%""></Object></div>');
-		$resume.on('click', function(){
-			$(this).remove();
+		$resume.on('click', function(e){
+			$(this).detach();
 		});
 
 		//create the buttons and append them to the #buttons dom Element
@@ -32,7 +32,6 @@ $(document).ready(function(){
 			switch($(this)[0].innerHTML) {
 				case 'RESUME':
 					$("#screen").append($resume);
-					console.log('resume');
 					break;
 				case 'PROJECTS':
 					console.log('projects');
