@@ -2,13 +2,16 @@ $(document).ready(function(){
 
 	(function(){
 		var buttonsInfo = [
-			{ title: 'RESUME', href:'#resume' },
-			{ title: 'PROJECTS', href:'#projects' },
-			{ title: 'ABOUT' , href: '#about'}];
+			{ title: 'RESUME'},
+			{ title: 'PROJECTS' },
+			{ title: 'ABOUT'}];
+
+		// var $resume = $("<embed src='./img/resume.pdf'></embed>");
+		var $resume = $('<object data="./img/resume.pdf" type="application/pdf" width="80%" >');
 
 		//create the buttons and append them to the #buttons dom Element
 		var $buttonsArray = buttonsInfo.map(function(obj) {
-			return $("<button class='btn' href="+ obj.href +">" + obj.title + "</title>");
+			return $("<button class='btn'>" + obj.title + "</title>");
 		});
 
 		$('#buttons').append($buttonsArray); 
@@ -19,6 +22,22 @@ $(document).ready(function(){
 			$(this).animate({"width" : "450px"}, 200)
 		}).on("mouseleave", function(){
 			$(this).animate({"width" : "400px"}, 300)
+		});
+
+		//action when clicking on the buttons
+		$('.btn').click(function(){
+			switch($(this)[0].innerHTML) {
+				case 'RESUME':
+					 $("#screen").append($resume);
+					console.log('resume');
+					break;
+				case 'PROJECTS':
+					console.log('projects');
+					break;
+				case 'ABOUT':
+					console.log('About');
+					break;
+			}
 		});
 
 	})();
