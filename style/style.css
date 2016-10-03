@@ -24,6 +24,10 @@ footer {
 	bottom: 0px;
 }
 
+a {
+	text-decoration: none;
+}
+
 #top {
 	color: black;
 	padding-left: 30px;
@@ -79,6 +83,22 @@ footer {
 }
 
 .project {
-	width: 50%;
+	display: inline-block;
+	margin: 2vw 0%;
 }
 
+.project-img {
+	width: 60vw;
+	border-radius: 10px;
+}
+
+.project-img:hover {
+	border: 1vw solid white;
+}
+
+a div {
+	font-size: 1.5vw;
+	color: white;
+	text-align: left;
+	margin-left: 2vw;
+}
