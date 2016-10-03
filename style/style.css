@@ -82,6 +82,12 @@ a {
 	background: rgba(0,0,0,0.8);
 }
 
+.noscroll {
+	overflow: hidden;
+}
+
+/* PROJECTS */
+
 .projects {
 	overflow-x: scroll;
 	height: 100vh;
@@ -95,6 +101,7 @@ a {
 .project-img {
 	width: 60vw;
 	border-radius: 10px;
+	border: 1vw solid rgb(0, 0, 0, 0);
 }
 
 .project-img:hover {

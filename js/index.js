@@ -86,6 +86,7 @@ $(document).ready(function(){
 
 		function addOnClickEvent(domElement) {
 			domElement.on('click', function(e){
+				$('body').removeClass('noscroll');
 				$(this).animate({opacity: 0}, 500, function(){
 					$(this).detach();
 				});
@@ -93,6 +94,7 @@ $(document).ready(function(){
 		}
 
 		function appendToScreenAndAnimate(domElement) {
+			$('body').addClass('noscroll');
 			$('#screen').append(domElement);
 			domElement.animate({opacity: 1}, 500);
 		}
