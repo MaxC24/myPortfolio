@@ -1,7 +1,6 @@
 $(document).ready(function(){
 
 	(function(){
-
 		//create the buttons, append them to the dom and animate them onclick:
 
 		var buttonsInfo = [
@@ -64,6 +63,7 @@ $(document).ready(function(){
 
 		$.each($projects.find('a'), function(index, elem){
 			$(elem).on('click', function(){
+				$('body').removeClass('noscroll');
 				$('#animation').css({'display' : 'block', 'width': window.screen.availWidth}).animate({'opacity': 1}, 500);
 			});
 		});
