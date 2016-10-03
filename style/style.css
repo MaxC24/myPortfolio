@@ -101,11 +101,11 @@ a {
 .project-img {
 	width: 60vw;
 	border-radius: 10px;
-	border: 1vw solid rgb(0, 0, 0, 0);
+	border: 1vw solid rgba(0, 0, 0, 0.2);
 }
 
 .project-img:hover {
-	border: 1vw solid white;
+	border: 1vw solid rgba(256, 256, 256, 0.8);
 }
 
 a div {
