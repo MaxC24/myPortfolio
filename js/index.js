@@ -37,26 +37,27 @@ $(document).ready(function(){
 		//create the projects lightbox component and add onlickevent.
 
 		var projects = [{
-			name: "Pop Writer",
+			name: "POP WRITER",
 			url: "http://www.pop-writer.com",
 			img: "img/popwriter.png"
 		},{
-			name: "Movies App",
-			url: "www.themoviesapp.xyz",
+			name: "MOVIES APP",
+			url: "http://www.themoviesapp.xyz",
 			img: "img/movies.png"
 		},{
-			name: "Twitter Heat Map",
+			name: "TWITTER HEAT MAP",
 			url: "https://github.com/Sushi1985/Twitter-Heat-Map",
 			img: "img/twitter.png"
 		},{
-			name: "Imp.nyc",
-			url: "www.imp.nyc",
+			name: "IMP.NYC",
+			url: "http://www.imp.nyc",
 			img: "img/imp.png"
 		}];
 
-		var $projects = projects.reduce(function(a, b){
-			return a + "<div class='project'><a href=" + b.url + "><img src=" + b.img + " /></a><div class='project-title'>" + b.name + "</div></div>";
-		}, '');
+		var $projects = projects.reduce(function(a, b, index){
+			if(index === projects.length -1) return a + "<div class='project'><a href=" + b.url + "><img class='project-img' src=" + b.img + " /><div>" + b.name + "</div></a></div></div>";
+			return a + "<div class='project'><a href=" + b.url + "><img class='project-img' src=" + b.img + " /><div>" + b.name + "</div></a></div>";
+		}, '<div class="projects">');
 
 		$projects = addToLightBox($projects);
 		addOnClickEvent($projects);
@@ -85,6 +86,7 @@ $(document).ready(function(){
 
 		function addOnClickEvent(domElement) {
 			domElement.on('click', function(e){
+				$('body').removeClass('noscroll');
 				$(this).animate({opacity: 0}, 500, function(){
 					$(this).detach();
 				});
@@ -92,6 +94,7 @@ $(document).ready(function(){
 		}
 
 		function appendToScreenAndAnimate(domElement) {
+			$('body').addClass('noscroll');
 			$('#screen').append(domElement);
 			domElement.animate({opacity: 1}, 500);
 		}
