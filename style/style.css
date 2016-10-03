@@ -7,6 +7,7 @@ body {
 	height: 100%;
 	font-size: 1em;
 	font-family: Gotham Rounded;
+	background-color: #F9F9F9;
 }
 
 button {
@@ -19,11 +20,12 @@ footer {
 	height:50vw;
 	background: url('../img/dreamy_landscape.png') no-repeat;
 	background-size: 100% auto;
+	background-color: rgb(0, 0, 0, .5);
 	bottom: 0px;
 }
 
 #top {
-	color: #888;
+	color: black;
 	padding-left: 30px;
 	padding-top: 45px;
 	height: 200px;
@@ -47,7 +49,7 @@ footer {
 }
 
 .btn {
-	color: #888;
+	color: black;
 	width: 400px;
 	height: 50px;
 	background-color: #EEE;
