@@ -5,9 +5,9 @@ $(document).ready(function(){
 		//create the buttons, append them to the dom and animate them onclick:
 
 		var buttonsInfo = [
-			{ title: 'RESUME'},
 			{ title: 'PROJECTS' },
-			{ title: 'ABOUT'}
+			{ title: 'ABOUT'},
+			{ title: 'RESUME'}
 		];
 
 		var $buttonsArray = buttonsInfo.map(function(obj) {
@@ -64,7 +64,7 @@ $(document).ready(function(){
 
 		$.each($projects.find('a'), function(index, elem){
 			$(elem).on('click', function(){
-				$('#animation').css({'display' : 'block', 'width': window.screen.availWidth}).fadein();
+				$('#animation').css({'display' : 'block', 'width': window.screen.availWidth}).animate({'opacity': 1}, 500);
 			});
 		});
 
