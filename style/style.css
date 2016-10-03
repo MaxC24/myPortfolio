@@ -114,3 +114,17 @@ a div {
 	text-align: left;
 	margin-left: 2vw;
 }
+
+/* animation */
+
+#animation {
+	display:none;
+	opacity: 0;
+	height: 85vh;
+	background: url('../img/giphy.gif');
+	background-size: 100%;
+	/*background-position: 0px -400px ;*/
+	position: fixed;
+	background-position: 0px -170px;
+	top: 0vh;
+}

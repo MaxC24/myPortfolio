@@ -62,6 +62,12 @@ $(document).ready(function(){
 		$projects = addToLightBox($projects);
 		addOnClickEvent($projects);
 
+		$.each($projects.find('a'), function(index, elem){
+			$(elem).on('click', function(){
+				$('#animation').css({'display' : 'block', 'width': window.screen.availWidth}).fadein();
+			});
+		});
+
 		//BUTTONS onclick actions
 		//action when clicking on the buttons
 		$('.btn').click(function(){
