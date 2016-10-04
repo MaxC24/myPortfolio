@@ -89,6 +89,12 @@ $(document).ready(function(){
 			}
 		});
 
+		//Walking Animation
+
+		$("#right-side").animate({'margin-left': '-25vw' }, 20000, function(){
+			$(this).css({'margin-left': window.screen.availWidth + 5 + 'vw'}).animate({'margin-left': '70vw'}, 10000);
+		});
+
 		//HELPER FUNCTIONS
 		
 		function addToLightBox(domElement){
