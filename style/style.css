@@ -17,7 +17,7 @@ button {
 
 footer {
 	height:50vw;
-	background: url('../img/dreamy_landscape.png') no-repeat;
+	background: url('../img/tabletop2.png') no-repeat;
 	background-size: 100% auto;
 	background-color: rgb(0, 0, 0, .5);
 	bottom: 0px;
@@ -138,5 +138,4 @@ a div {
 	background-size: 109%;
 	background-position: -20px -20px;
 	margin: 70px 10vw 0px 70vw;
-	/*position: fixed;*/
 }
