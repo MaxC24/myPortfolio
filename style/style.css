@@ -16,7 +16,6 @@ button {
 }
 
 footer {
-	width: 100%;
 	height:50vw;
 	background: url('../img/dreamy_landscape.png') no-repeat;
 	background-size: 100% auto;
@@ -41,15 +40,13 @@ a {
 	font-size: 2em;
 }
 
-
-#center {
-}
-
 #buttons {
 	padding: 50px 0px;
 	width: 200px;
 	position: relative;
 	right: 200px;
+	margin-right: 10vw;
+	float: left;
 }
 
 .btn {
@@ -123,8 +120,23 @@ a div {
 	height: 85vh;
 	background: url('../img/giphy.gif');
 	background-size: 100%;
-	/*background-position: 0px -400px ;*/
 	position: fixed;
 	background-position: 0px -170px;
 	top: 0vh;
+}
+
+/* Right Side */
+
+#center {
+	overflow: hidden;
+}
+
+#right-side {
+	width: 320px;
+	height: 240px;
+	background: url('../img/howls-castle.gif');
+	background-size: 109%;
+	background-position: -20px -20px;
+	margin: 70px 10vw 0px 70vw;
+	/*position: fixed;*/
 }

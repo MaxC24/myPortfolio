@@ -2,7 +2,7 @@ $(document).ready(function(){
 
 	(function(){
 		//create the buttons, append them to the dom and animate them onclick:
-
+		$body = $('body');
 		var buttonsInfo = [
 			{ title: 'PROJECTS' },
 			{ title: 'ABOUT'},
@@ -63,20 +63,25 @@ $(document).ready(function(){
 
 		$.each($projects.find('a'), function(index, elem){
 			$(elem).on('click', function(){
-				$('body').removeClass('noscroll');
+				$animation = $("<div id=animation></div>");
+				$body.append($animation).removeClass('noscroll');
 				$('#animation').css({'display' : 'block', 'width': window.screen.availWidth}).animate({'opacity': 1}, 500);
 			});
 		});
+
+		//ABOUT BUTTON
+
+
 
 		//BUTTONS onclick actions
 		//action when clicking on the buttons
 		$('.btn').click(function(){
 			switch($(this)[0].innerHTML) {
 				case 'RESUME':
-					appendToScreenAndAnimate($resume);
+					appendToBodyAndAnimate($resume);
 					break;
 				case 'PROJECTS':
-					appendToScreenAndAnimate($projects);
+					appendToBodyAndAnimate($projects);
 					break;
 				case 'ABOUT':
 					console.log('About');
@@ -92,16 +97,16 @@ $(document).ready(function(){
 
 		function addOnClickEvent(domElement) {
 			domElement.on('click', function(e){
-				$('body').removeClass('noscroll');
+				$body.removeClass('noscroll');
 				$(this).animate({opacity: 0}, 500, function(){
 					$(this).detach();
 				});
 			});
 		}
 
-		function appendToScreenAndAnimate(domElement) {
-			$('body').addClass('noscroll');
-			$('#screen').append(domElement);
+		function appendToBodyAndAnimate(domElement) {
+			$body.addClass('noscroll');
+			$body.append(domElement);
 			domElement.animate({opacity: 1}, 500);
 		}
 
