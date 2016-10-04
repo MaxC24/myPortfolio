@@ -5,8 +5,8 @@ $(document).ready(function(){
 		$body = $('body');
 		var buttonsInfo = [
 			{ title: 'PROJECTS' },
-			{ title: 'ABOUT'},
-			{ title: 'RESUME'}
+			{ title: 'RESUME'},
+			{ title: 'ABOUT'}
 		];
 
 		var $buttonsArray = buttonsInfo.map(function(obj) {
@@ -28,7 +28,7 @@ $(document).ready(function(){
 
 		//RESUME BUTTON
 		// create the resume dom Element and attach it to a display none lightbox that will fade/in at resume btn onclick
-		var $resume = '<Object data="./img/resume.pdf" type="application/pdf" width="70%" height="100%""></Object>';
+		var $resume = $('<Object data="./img/resume.pdf" type="application/pdf" width="70%" height="100%""></Object>');
 		$resume = addToLightBox($resume);
 		addOnClickEvent($resume);
 
@@ -53,11 +53,11 @@ $(document).ready(function(){
 			img: "img/imp.png"
 		}];
 
-		var $projects = projects.reduce(function(a, b, index){
+		var projectsHtml = projects.reduce(function(a, b, index){
 			if(index === projects.length -1) return a + "<div class='project'><a href=" + b.url + "><img class='project-img' src=" + b.img + " /><div>" + b.name + "</div></a></div></div>";
 			return a + "<div class='project'><a href=" + b.url + "><img class='project-img' src=" + b.img + " /><div>" + b.name + "</div></a></div>";
 		}, '<div class="projects">');
-
+		$projects = $(projectsHtml);
 		$projects = addToLightBox($projects);
 		addOnClickEvent($projects);
 
@@ -70,8 +70,12 @@ $(document).ready(function(){
 		});
 
 		//ABOUT BUTTON
+        // $('.btn').last().append($('<a href="massimo.crapanzano@gmail.com" ></a>'));
 
-
+        $about = $('#about').detach();
+        $about = addToLightBox($about);
+        console.log($about);
+        addOnClickEvent($about);
 
 		//BUTTONS onclick actions
 		//action when clicking on the buttons
@@ -84,21 +88,22 @@ $(document).ready(function(){
 					appendToBodyAndAnimate($projects);
 					break;
 				case 'ABOUT':
-					console.log('About');
+					appendToBodyAndAnimate($about)
 					break;
 			}
 		});
 
 		//Walking Animation
 
-		$("#right-side").animate({'margin-left': '-25vw' }, 20000, function(){
+		$("#right-side").animate({'margin-left': '-500px' }, 20000, function(){
 			$(this).css({'margin-left': window.screen.availWidth + 5 + 'vw'}).animate({'margin-left': '70vw'}, 10000);
 		});
 
 		//HELPER FUNCTIONS
 		
 		function addToLightBox(domElement){
-			return  $('<div class="lightbox">' + domElement + '</div>');
+			$lightbox = $('<div class="lightbox"></div>')
+			return  $lightbox.append(domElement);
 		}
 
 		function addOnClickEvent(domElement) {
