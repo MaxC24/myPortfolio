@@ -17,7 +17,7 @@ button {
 
 footer {
 	height:50vw;
-	background: url('../img/tabletop2.png') no-repeat;
+	background: url('../img/tabletop.png') no-repeat;
 	background-size: 100% auto;
 	background-color: rgb(0, 0, 0, .5);
 	bottom: 0px;
@@ -77,6 +77,7 @@ a {
 	top: 0;
 	left: 0;
 	background: rgba(0,0,0,0.8);
+	overflow-x: scroll;
 }
 
 .noscroll {
@@ -84,11 +85,6 @@ a {
 }
 
 /* PROJECTS */
-
-.projects {
-	overflow-x: scroll;
-	height: 100vh;
-}
 
 .project {
 	display: inline-block;
@@ -140,13 +136,11 @@ a div {
 	margin: 70px 10vw 0px 70vw;
 }
 
+/* ABOUT */
+
 #about {
 	margin: 10%;
 	padding: 5%;
 	border-radius: 2vw;
 	background-color: white;
-}
-
-#about img {
-	width:5vw;
 }

@@ -38,19 +38,19 @@ $(document).ready(function(){
 		var projects = [{
 			name: "POP WRITER",
 			url: "http://www.pop-writer.com",
-			img: "img/popwriter.png"
+			img: "img/popwriter.jpg"
 		},{
 			name: "MOVIES APP",
 			url: "http://www.themoviesapp.xyz",
-			img: "img/movies.png"
+			img: "img/movies.jpg"
 		},{
 			name: "TWITTER HEAT MAP",
 			url: "https://github.com/Sushi1985/Twitter-Heat-Map",
-			img: "img/twitter.png"
+			img: "img/twitter.jpg"
 		},{
 			name: "IMP.NYC",
 			url: "http://www.imp.nyc",
-			img: "img/imp.png"
+			img: "img/imp.jpg"
 		}];
 
 		var projectsHtml = projects.reduce(function(a, b, index){
