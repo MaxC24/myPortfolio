@@ -28,7 +28,7 @@ $(document).ready(function(){
 
 		//RESUME BUTTON
 		// create the resume dom Element and attach it to a display none lightbox that will fade/in at resume btn onclick
-		var $resume = $('<Object data="./img/resume.pdf" type="application/pdf" width="70%" height="100%""></Object>');
+		var $resume = $('<img src="./img/resume.jpg" style="width:70%" /><div id="download"><a  href="img/Massimo-Crapanzano-Resume.pdf">Download Pdf</a></div>');
 		$resume = addToLightBox($resume);
 		addOnClickEvent($resume);
 
@@ -74,7 +74,6 @@ $(document).ready(function(){
 
         $about = $('#about').detach();
         $about = addToLightBox($about);
-        console.log($about);
         addOnClickEvent($about);
 
 		//BUTTONS onclick actions

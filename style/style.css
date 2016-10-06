@@ -25,6 +25,7 @@ footer {
 
 a {
 	text-decoration: none;
+	color: white;
 }
 
 #top {
@@ -143,4 +144,10 @@ a div {
 	padding: 5%;
 	border-radius: 2vw;
 	background-color: white;
+}
+
+/* Resume Page */
+
+#download {
+	margin: 2vw;
 }
