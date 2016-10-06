@@ -25,7 +25,6 @@ footer {
 
 a {
 	text-decoration: none;
-	color: white;
 }
 
 #top {
@@ -104,7 +103,6 @@ a {
 
 a div {
 	font-size: 1.5vw;
-	color: white;
 	text-align: left;
 	margin-left: 2vw;
 }
@@ -148,6 +146,7 @@ a div {
 
 /* Resume Page */
 
-#download {
+div#download {
 	margin: 2vw;
+	color: white;
 }
