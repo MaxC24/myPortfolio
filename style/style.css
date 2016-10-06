@@ -25,6 +25,7 @@ footer {
 
 a {
 	text-decoration: none;
+	color: white;
 }
 
 #top {
@@ -144,9 +145,12 @@ a div {
 	background-color: white;
 }
 
+#about a {
+	color: blue;
+}
+
 /* Resume Page */
 
 div#download {
 	margin: 2vw;
-	color: white;
 }
